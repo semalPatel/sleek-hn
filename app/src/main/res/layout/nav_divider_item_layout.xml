@@ -18,7 +18,7 @@
     <data>
         <variable
             name="navDivider"
-            type="com.materialstudies.reply.ui.nav.NavigationModelItem.NavDivider" />
+            type="com.materialstudies.sleekhn.ui.nav.NavigationModelItem.NavDivider" />
     </data>
 
     <TextView

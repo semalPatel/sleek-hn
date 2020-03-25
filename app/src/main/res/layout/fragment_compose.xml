@@ -18,7 +18,7 @@
     <data>
         <variable
             name="email"
-            type="com.materialstudies.reply.data.Email" />
+            type="com.materialstudies.sleekhn.data.Email" />
     </data>
 
     <androidx.core.widget.NestedScrollView

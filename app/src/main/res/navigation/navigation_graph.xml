@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.materialstudies.reply.ui.home.HomeFragment"
+        android:name="com.materialstudies.sleekhn.ui.home.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_emailFragment"
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/emailFragment"
-        android:name="com.materialstudies.reply.ui.email.EmailFragment"
+        android:name="com.materialstudies.sleekhn.ui.email.EmailFragment"
         android:label="EmailFragment">
         <argument
             android:name="emailId"
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/composeFragment"
-        android:name="com.materialstudies.reply.ui.compose.ComposeFragment"
+        android:name="com.materialstudies.sleekhn.ui.compose.ComposeFragment"
         android:label="ComposeFragment">
         <argument
             android:name="replyToEmailId"
