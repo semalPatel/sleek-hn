@@ -67,8 +67,25 @@ dependencies {
     // Material Components
     implementation "com.google.android.material:material:${versions.material}"
 
+    //Koin
+    implementation "org.koin:koin-core:${versions.koin}"
+    implementation "org.koin:koin-core-ext:${versions.koin}"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${versions.gsonConverter}"
+    implementation "com.google.code.gson:gson:${versions.gson}"
+
+    //Room
+    implementation "androidx.room:room-runtime:${versions.room}"
+    implementation "androidx.room:room-ktx:${versions.room}"
+    kapt "androidx.room:room-compiler:${versions.room}"
+
+
+
     // Testing
     testImplementation "junit:junit:${versions.junit}"
+    testImplementation "org.koin:koin-test:${versions.koin}"
     androidTestImplementation "androidx.test:runner:${versions.runner}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${versions.espresso}"
 }
