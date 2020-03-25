@@ -87,7 +87,7 @@ class HomeFragment : Fragment(), EmailAdapter.EmailAdapterListener {
         MenuBottomSheetDialogFragment(R.menu.email_bottom_sheet_menu) {
             // Do nothing.
             true
-        }.show(requireFragmentManager(), null)
+        }.show(parentFragmentManager, null)
 
         return true
     }
