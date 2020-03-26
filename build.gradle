@@ -38,7 +38,7 @@ buildscript {
             'retrofit'          :   '2.8.0',
             'gson'              :   '2.8.5',
             'gsonConverter'     :   '2.6.0',
-
+            'googleServices'    :   '4.3.3'
     ]
     ext.names = [
             'applicationId'     :   'com.materialstudies.sleekhn',
@@ -51,9 +51,10 @@ buildscript {
     dependencies{
         // Wait to move to 3.6 until ConstraintLayout related attribute bugs are resolved. See
         // https://issuetracker.google.com/issues/138601946 for more details.
-        classpath "com.android.tools.build:gradle:$gradle_version"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navFragment"
+        classpath "com.android.tools.build:gradle:${gradle_version}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navFragment}"
+        classpath "com.google.gms:google-services:${versions.googleServices}"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
