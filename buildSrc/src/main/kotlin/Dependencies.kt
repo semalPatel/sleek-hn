@@ -1,6 +1,5 @@
 
 object Versions {
-    const val applicationId = "com.materialstudies.sleekhn"
     const val version = "1.0"
     const val compileSdk = 29
     const val minSdk = 23
@@ -36,6 +35,28 @@ object Versions {
     const val gsonConverter = "2.6.0"
 
     const val googleServices = "4.3.3"
+}
+
+object ApplicationSetup {
+    const val applicationId = "com.materialstudies.sleekhn"
+    const val navArgsPlugin = "androidx.navigation.safeargs.kotlin"
+    const val id = "com.android.application"
+    const val android = "android"
+    const val kapt = "kapt"
+    const val extensions = "android.extensions"
+    const val testInstrumentRunner = "androidx.test.runner.AndroidJUnitRunner"
+    const val release = "release"
+    const val proguardAndroid = "proguard-android.txt"
+    const val proguardRules = "proguard-rules.pro"
+    val fileTreeSetup = mapOf("dir" to "libs", "include" to listOf("*.jar"))
+}
+
+object ProjectSetup {
+    const val buildToolsClassPath = "com.android.tools.build:gradle:${Versions.gradle}"
+    const val kotlinGradleClassPath = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    const val navSafeArgsClassPath = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navFragment}"
+    const val googleServicesClassPath = "com.google.gms:google-services:${Versions.googleServices}"
+    const val clean = "clean"
 }
 
 

@@ -14,44 +14,41 @@
 
 
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
-    kotlin("android.extensions")
+    id(ApplicationSetup.id)
+    kotlin(ApplicationSetup.android)
+    kotlin(ApplicationSetup.kapt)
+    kotlin(ApplicationSetup.extensions)
 }
 
-apply(plugin = "androidx.navigation.safeargs.kotlin")
+apply(plugin = ApplicationSetup.navArgsPlugin)
 
 android {
     compileSdkVersion(Versions.compileSdk)
     defaultConfig {
-        applicationId(Versions.applicationId)
+        applicationId(ApplicationSetup.applicationId)
         minSdkVersion(Versions.minSdk)
         targetSdkVersion(Versions.targetSdk)
         versionCode = 1
         versionName = Versions.version
-        testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
+        testInstrumentationRunner(ApplicationSetup.testInstrumentRunner)
+        buildFeatures.dataBinding
     }
-
-    dataBinding.isEnabled = true
 
     buildTypes {
-        getByName("release") {
+        getByName(ApplicationSetup.release) {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            proguardFiles(getDefaultProguardFile(ApplicationSetup.proguardAndroid), ApplicationSetup.proguardRules)
         }
     }
+
     compileOptions.setSourceCompatibility(1.8)
     compileOptions.setTargetCompatibility(1.8)
 
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    buildToolsVersion="29.0.2"
+    buildToolsVersion = Versions.buildTools
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(fileTree(ApplicationSetup.fileTreeSetup))
 
     // Kotlin
     implementation(Dependencies.kotlinStdLib)
@@ -85,8 +82,6 @@ dependencies {
     implementation(Dependencies.roomRuntime)
     implementation(Dependencies.roomKtx)
     kapt(Dependencies.roomCompiler)
-
-
 
     // Testing
     testImplementation(Dependencies.junit)

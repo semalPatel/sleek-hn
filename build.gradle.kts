@@ -20,10 +20,10 @@ buildscript {
     dependencies{
         // Wait to move to 3.6 until ConstraintLayout related attribute bugs are resolved. See
         // https://issuetracker.google.com/issues/138601946 for more details.
-        classpath("com.android.tools.build:gradle:${Versions.gradle}")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navFragment}")
-        classpath("com.google.gms:google-services:${Versions.googleServices}")
+        classpath(ProjectSetup.buildToolsClassPath)
+        classpath(ProjectSetup.kotlinGradleClassPath)
+        classpath(ProjectSetup.navSafeArgsClassPath)
+        classpath(ProjectSetup.googleServicesClassPath)
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -37,6 +37,6 @@ allprojects {
     }
 }
 
-tasks.register("clean", Delete::class) {
+tasks.register(ProjectSetup.clean, Delete::class) {
     delete(rootProject.buildDir)
 }
