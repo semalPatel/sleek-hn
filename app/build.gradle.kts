@@ -29,7 +29,7 @@ android {
         minSdkVersion(Versions.minSdk)
         targetSdkVersion(Versions.targetSdk)
         versionCode = 1
-        versionName = Versions.version
+        versionName = Versions.name
         testInstrumentationRunner(ApplicationSetup.testInstrumentRunner)
         buildFeatures.dataBinding
     }
