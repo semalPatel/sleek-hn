@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="sleek-hn.app" target="1.8" />
+      <module name="sleek-hn.buildSrc" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
